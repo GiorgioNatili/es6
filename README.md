@@ -6,12 +6,14 @@ Getting started with ECMA 6 today
 Tools
 -------------
 
+### Browsers & Co.
 If you want to start to trye the new capabilities of ECMA6 today you can
 use one of the following browser:
 
-*   sasds
-*   adadasas
-*   adasdasad
+*   [Firefox Aurora (Nightly Build)](http://nightly.mozilla.org/)
+*   [Chrome Canary (Nightly
+    Uopdates](http://www.google.com/intl/en/chrome/browser/canary.html)
+*   Your current borwser running [es6fiddle](http://www.es6fiddle.net/)
 
 In order to run ECMA 6 today for production the fast path to do it is to
 run a build time transpilation task, following a list of the most
