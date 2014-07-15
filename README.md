@@ -1,7 +1,7 @@
 es6
 ===
 
-Getting started with ECMA 6 today
+Getting started with ECMA 6 today using shims and transpilers. Using the new features is finally possible to write a more SOLID (Single responsibility, Open-closed, Liskov substitution, Interface segregation and Dependency inversion) JavaScript code.
 
 Tools
 -------------
@@ -12,7 +12,7 @@ use one of the following browser:
 
 *   [Firefox Aurora (Nightly Build)](http://nightly.mozilla.org/)
 *   [Chrome Canary (Nightly
-    Uopdates](http://www.google.com/intl/en/chrome/browser/canary.html)
+    Updates)](http://www.google.com/intl/en/chrome/browser/canary.html)
 *   Your current borwser running [es6fiddle](http://www.es6fiddle.net/)
 
 In order to run ECMA 6 today for production the fast path to do it is to
