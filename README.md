@@ -21,6 +21,15 @@ popuplar Grunt tasks available today,
 [here](https://github.com/addyosmani/es6-tools) you can instad find a
 detailed list of the tasks avaialble also for different envrionments. 
 
+### Tools
+* [6to5](https://github.com/sebmck/6to5) - Turn ES6+ code into vanilla ES5 with no runtime
+* [Traceur compiler](https://github.com/google/traceur-compiler) - ES6 features > ES5. Includes classes, generators, promises, destructuring patterns, default parameters & more.
+* [es6ify](https://github.com/thlorenz/es6ify) - Traceur compiler wrapped as a [Browserify](http://browserify.org/) v2 transform
+* [es6-transpiler](https://github.com/termi/es6-transpiler) - ES6 > ES5. Includes classes, destructuring, default parameters, spread
+* [es6now](https://github.com/zenparsing/es6now) - ES6 to ES5 compiler and ES6 runtime environment
+* Facebook's [regenerator](https://github.com/facebook/regenerator) - transform ES6 yield/generator functions to ES5
+* [regexpu](https://github.com/mathiasbynens/regexpu) — Transform Unicode-aware ES6 regular expressions to ES5
+
 ### Grunt Tasks
 * Traceur: [grunt-traceur](https://github.com/aaronfrost/grunt-traceur)
   ES6 > ES5 transpilation,
@@ -38,3 +47,5 @@ detailed list of the tasks avaialble also for different envrionments.
 * es6-transpiler:
   [grunt-es6-transpiler](https://github.com/sindresorhus/grunt-es6-transpiler)
 - ES6 → ES5
+
+> Keep an eye on [this repo](https://github.com/addyosmani/es6-tools) for an even more updated list of tools and libraries.
