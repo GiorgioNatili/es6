@@ -48,4 +48,4 @@ detailed list of the tasks avaialble also for different envrionments.
   [grunt-es6-transpiler](https://github.com/sindresorhus/grunt-es6-transpiler)
 - ES6 → ES5
 
-> Keep an eye on [this repo](https://github.com/addyosmani/es6-tools) for an even more updated list of tools and libraries.
+> Keep an eye on [this repo](https://github.com/addyosmani/es6-tools) maintained from Addy Osmani for an even more updated list of tools and libraries.

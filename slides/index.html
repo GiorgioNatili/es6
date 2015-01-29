@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ECMA Script 6 in 30 Minutes</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="An introduction to the potentialities of ECMA6 and to better way of developing ubiquitous JavaScript.">
+    <meta name="generator" content="SlideCaptain">
+    <meta name="keywords" content="javascript,cleancode,amd,promises">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <base href="" target="_blank">
+
+    <link rel="stylesheet" href="ajax/libs/highlight.js/8.0/styles/tomorrow.min.css">
+<link rel="stylesheet" href="ajax/libs/animate.css/3.1.0/animate.min.css">
+<link rel="stylesheet" href="ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="bower_components/Flowtime.js/css/flowtime.css">
+<link rel="stylesheet" href="styles/themes/less/sc-theme.css">
+
+    <meta property="og:title" content="ECMA Script 6 in 30 Minutes">
+    <meta property="og:description" content="An introduction to the potentialities of ECMA6 and to better way of developing ubiquitous JavaScript.">
+    <meta property="og:url" content="https://www.slidecaptain.com/flows/undefined">
+</head>
+<body class="sc-theme-font-7 sc-theme-color-8">
+<article class="flowtime no-transition">
+    
+    <section class="ft-section" data-title="Welcome" data-id="welcome">
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="background-image: url(&quot;https://s3-eu-west-1.amazonaws.com/filepicker.slidecaptain/my-images/mb7TVvIjTzlY6SyhxOwF_giorgioNatili.jpg&quot;); background-size: cover;">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <div>&#xA0;</div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="background-color: rgb(245, 245, 245);">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">About Me</h1>
+                    
+                    <div><br></div>
+                    
+                    <div><ul><li>Technical Leader and Agile Coach<br></li><li>Front-end Developer (test first!)</li><li>Mobile Developer (Hybrid with Cordova, iOS, Android)</li><li>Technology Enthusiast</li><li>Mentor @ Airpair.com</li><li>GSD guy</li></ul></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">McGraw Hill Education</h1>
+                    
+                    <h1 style="text-align: center;"> is Hiring</h1>
+                    
+                    <div><a href="http://www.mheducation.com/careers">http://www.mheducation.com/careers</a><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h3 style="text-align: center;">What&apos;s Next?</h3>
+                    
+                    <h1>Scotch Streaming and Scaling</h1>
+                    
+                    <h3>11 Feb 2015</h3>
+                    
+                    <div><a href="http://www.meetup.com/mobiletea">www.meetup.com/mobiletea</a></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Agenda</h1>
+                    
+                    <div><ul><li>Using ECMA 6 today</li><li>ECMA 6 modules</li><li>Variables scoping with ECMA 6<br></li><li>ECMA 6 new core features (Array, String, Numbers, etc.)</li><li>Handling data with Maps and Sets</li><li>Destructuring Arrays and Objects</li><li>Handlign external data using Promises and Deferred</li></ul></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">I speak Ecma Script!<br></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+    </section>
+    
+    <section class="ft-section" data-title="Sharpen the Weapons" data-id="sharpen-the-weapons">
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="background-color: rgb(245, 245, 245);">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Sharpen the Weapons<br></h1>
+                    
+                    <div><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Where is JavaScript?</h1>
+                    
+                    <div><div sc-embedded="" class="sc-draggable ng-scope ng-isolate-scope" data-embedded="{&quot;original&quot;:{&quot;url&quot;:&quot;https://www.filepicker.io/api/file/4XrSWoTI66sWzguSICBQ&quot;,&quot;filename&quot;:&quot;W3C-RecsFigure.png&quot;,&quot;mimetype&quot;:&quot;image/png&quot;,&quot;size&quot;:40422,&quot;key&quot;:&quot;my-images/n91uOnicQOzxJZtUnTuK_W3C-RecsFigure.png&quot;,&quot;container&quot;:&quot;filepicker.slidecaptain&quot;,&quot;isWriteable&quot;:true},&quot;filename&quot;:&quot;W3C-RecsFigure.png&quot;,&quot;presid&quot;:&quot;id-1472ba1a3b6-000-0&quot;,&quot;thumb&quot;:{&quot;url&quot;:&quot;https://www.filepicker.io/api/file/LNyJJnwrRByD76kgBna7&quot;,&quot;filename&quot;:&quot;W3C-RecsFigure.png&quot;,&quot;mimetype&quot;:&quot;image/png&quot;,&quot;size&quot;:8994,&quot;key&quot;:&quot;my-images/46PPluAHQ7dfpGmJlKy7_W3C-RecsFigure.png&quot;,&quot;isWriteable&quot;:false,&quot;container&quot;:&quot;filepicker.slidecaptain&quot;},&quot;thumbnail_width&quot;:693,&quot;thumbnail_height&quot;:401,&quot;thumbnail_url&quot;:&quot;https://s3-eu-west-1.amazonaws.com/filepicker.slidecaptain/my-images/n91uOnicQOzxJZtUnTuK_W3C-RecsFigure.png&quot;}" contenteditable="false" title="" draggable="true" data-size="120" data-opacity="100" data-float="false" data-alignment="center top" data-link="" style="margin: 0.5rem auto; width: 51.975rem; height: 30.075rem; opacity: 1;"><div sc-embedded-thumbnail="" data-img="https://s3-eu-west-1.amazonaws.com/filepicker.slidecaptain/my-images/n91uOnicQOzxJZtUnTuK_W3C-RecsFigure.png" ng-click="showOptions()" class="ng-scope ng-isolate-scope"><img class="sc-embedded-thumbnail" ng-src="https://s3-eu-west-1.amazonaws.com/filepicker.slidecaptain/my-images/n91uOnicQOzxJZtUnTuK_W3C-RecsFigure.png" src="filepicker.slidecaptain/my-images/n91uOnicQOzxJZtUnTuK_W3C-RecsFigure.png"></div></div><br><br><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Modular JavaScript</h1>
+                    
+                    <div><ul><li>Self contained&#xA0;</li><li>Avoid global scope pollution (global scope is not evil!)</li><li>Keep the project organized</li><li>Improve code reusability</li><li>Highly testable and well defined API</li><br></ul></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-4 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Which Options?</h1>
+                    
+                </div>
+                
+                <div class="sc-box box1">
+                    
+                    <h1 style="text-align: center;"><br></h1>
+                    
+                    <h1 style="text-align: center;">AMD</h1>
+                    
+                </div>
+                
+                <div class="sc-box box2">
+                    
+                    <h1 style="text-align: center;">&#xA0;<br>CommonJS</h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="background-color: rgb(245, 245, 245);">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">AMD Module (1/3)</h1>
+                    
+                    <div>Simple return object as a collection of name/value pairs</div>
+                    
+                    <div><br></div>
+                    
+                    <div><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 23.9375rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-tag">define</span>(<span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-string">&quot;black&quot;</span>,
+    size: <span class="hljs-string">&quot;unisize&quot;</span>
+</span></span></span>});
+</code></pre><br></div>
+                    
+                    <div><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="background-color: rgb(245, 245, 245);">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">AMD (2/3)</h1>
+                    
+                    <div>Return object with &quot;privacy&quot; implementation</div>
+                    
+                    <div><br></div>
+                    
+                    <div><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript">define(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    
+    <span class="hljs-comment">// Do setup work here</span>
+    <span class="hljs-keyword">return</span> {
+        color: <span class="hljs-string">&quot;black&quot;</span>,
+        <span class="hljs-built_in">size</span>: <span class="hljs-string">&quot;unisize&quot;</span>
+    }
+});</code></pre><br></div>
+                    
+                    <div><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">AMD (3/3)</h1>
+                    
+                    <div>Return object with &quot;privacy&quot; implementation and dependencies management</div>
+                    
+                    <div><br></div>
+                    
+                    <div><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript">define([<span class="hljs-string">&quot;./inventory&quot;</span>, <span class="hljs-string">&quot;./currencies&quot;</span>], <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(inventory, currencies)</span> {</span>
+    
+    <span class="hljs-keyword">var</span> code = <span class="hljs-string">&quot;ye76hg&quot;</span>;
+    <span class="hljs-keyword">var</span> getPrice = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+      
+      <span class="hljs-keyword">return</span> currencies.getPrice(code);  
+        
+    };
+
+    <span class="hljs-keyword">return</span> {
+        color: <span class="hljs-string">&quot;black&quot;</span>,
+        size: <span class="hljs-string">&quot;unisize&quot;</span>,
+        available: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+            <span class="hljs-keyword">return</span> inventory.isAvailable(code);
+        },
+        price: getPrice()
+    }
+});</code></pre><br></div>
+                    
+                    <div><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="background-color: rgb(245, 245, 245);">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">CommonJS Module (1/2)</h1>
+                    
+                    <div>Simple plain file that &quot;exports&quot; features using the &quot;module&quot; variable (client.js)</div>
+                    
+                    <div><br></div>
+                    
+                    <div><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 30.9375rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-reserved">var</span> rest, mime, client;
+
+rest = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;rest&apos;</span>);
+mime = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;rest/interceptor/mime&apos;</span>);
+
+client = rest.chain(mime);
+
+<span class="hljs-built_in">module</span>.<span class="hljs-built_in">exports</span> = client;</code></pre><br></div>
+                    
+                    <div><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="background-color: rgb(245, 245, 245);">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">CommonJS Module (1/2)</h1>
+                    
+                    <div>Simple plain file that &quot;imports&quot; features</div>
+                    
+                    <div><br></div>
+                    
+                    <div><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-keyword">import</span> client <span class="hljs-keyword">from</span> collections;
+
+client.doStuff();</code></pre><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="background-color: rgb(245, 245, 245);">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Who wins?</h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="background-color: rgb(245, 245, 245);">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;"><iframe src="http://giphy.com/embed/p0OznL7SV0rao" width="860" height="644" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen class="ng-scope" style="font-size: 1.75rem; width: 53.75rem; height: 40.25rem; max-width: 95%; max-height: 95%;"></iframe><br></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">AMD to CommonJS</h1>
+                    
+                    <div style="text-align: left;"><br></div>
+                    
+                    <div><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 34.375rem;"><code ng-non-bindable="" class="language-javascript">define(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(require, exports, module)</span> {</span>    
+    
+    <span class="hljs-comment">// Put traditional CommonJS module content here</span>
+    exports.randomize = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( input )</span>{</span>
+        <span class="hljs-keyword">return</span> shuffler.shuffle(input);
+    }
+
+});</code></pre><div style="text-align: left;"><br></div></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">CommonJS to AMD</h1>
+                    
+                    <div>Convert the commonJS format to a browser compatible one using <i>browserify</i><br></div>
+                    
+                    <div><br></div>
+                    
+                    <div><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 28.5rem;"><code ng-non-bindable="" class="language-sh"><span class="hljs-variable">$ </span>npm install -g browserify</code></pre><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 28.5rem;"><code ng-non-bindable="" class="language-sh">$ browserify main<span class="hljs-preprocessor">.js</span> -o bundle<span class="hljs-preprocessor">.js</span></code></pre><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">ECMA6 Modules</h1>
+                    
+                    <div><ul><li><i>export</i>, functions and variables<br><br><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 44.9375rem;"><code ng-non-bindable="" class="language-javascript">export <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">area</span><span class="hljs-params">(radius)</span> {</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.PI * radius * radius;
+}
+ 
+export PI = <span class="hljs-built_in">Math</span>.PI;
+</code></pre><br></li><li><i>import</i>, modules<br><br><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 44.9375rem;"><code ng-non-bindable="" class="language-javascript">import &apos;<span class="hljs-keyword">the</span>/path/<span class="hljs-keyword">to</span>/your/<span class="hljs-type">file</span>&apos;</code></pre><br></li><li><i>import</i>, some features of a module&#xA0;<br><br><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 44.9375rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-keyword">import</span> { area, circumference } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;circle&apos;</span>;</code></pre><br></li></ul></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Advantages</h1>
+                    
+                    <div><ul><li>Compact, synchronous syntax</li><li>Asynchronous loading</li><li>Conditional module inclusion</li><li>Promote code modularization&#xA0;</li><li>API style&#xA0;development</li></ul></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Can I use them today?</h1>
+                    
+                    <div><br></div>
+                    
+                    <div><br></div>
+                    
+                    <h3 style="text-align: center;"><i>Kinda of...</i></h3>
+                    
+                    <div><i><br></i></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;"><iframe src="http://giphy.com/embed/yidUzHnBk32Um9aMMw" width="960" height="480" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen style="width: 60rem; height: 30rem; max-width: 95%; max-height: 95%;" class="ng-scope"></iframe><br></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-16 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Experimental Environments</h1>
+                    
+                    <div><ul><li>ES6 Fiddle <a href="http://www.es6fiddle.net/">http://www.es6fiddle.net/</a><br></li><li>Traceur Google transpiler&#xA0;<a href="http://google.github.io/traceur-compiler/demo/repl.html">http://google.github.io/traceur-compiler/demo/repl.html</a></li></ul></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Local Environment</h1>
+                    
+                    <div><ul style="font-family: &apos;Open Sans&apos;; font-size: 28px;"><li>Install&#xA0;<span style="background-color: rgb(168, 168, 168);">NodeJS</span>&#xA0;using&#xA0;<span style="background-color: rgb(168, 168, 168);">brew</span><br><br><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.4375rem;"><code ng-non-bindable="" class="language-sh"><span class="hljs-variable">$ </span>ruby -e <span class="hljs-string">&quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;</span>
+<span class="hljs-variable">$ </span>brew install node</code></pre></li><li>Verify that&#xA0;<span style="background-color: rgb(168, 168, 168);">npm</span>&#xA0;in installed<br><br><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.4375rem;"><code ng-non-bindable="" class="language-sh"><span class="hljs-variable">$ </span>npm</code></pre></li></ul></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Dev Environment&#xA0;(opt 1)<br></h1>
+                    
+                    <div><br></div>
+                    
+                    <div><ul><li>Install <span style="background-color: rgb(168, 168, 168);">yeoman</span> globally<br><br><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 25.1875rem;"><code ng-non-bindable="" class="language-sh"><span class="hljs-variable">$ </span>npm install yo -g</code></pre></li><li>Install the <span style="background-color: rgb(168, 168, 168);">es6next</span> yeoman generator&#xA0;<br><br><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 25.1875rem;"><code ng-non-bindable="" class="language-sh">$ npm install generator<span class="hljs-attribute">-esnext</span> <span class="hljs-attribute">-g</span></code></pre><br></li></ul></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Dev Environment (opt 2)&#xA0;</h1>
+                    
+                    <p style="text-align: left;"></p>
+                    
+                    <ul><li>Install 6to5 a transpiler able to produce readable ECMA5 code ECMA6<br><br><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-sh"><span class="hljs-variable">$ </span>npm install -g <span class="hljs-number">6</span>to5</code></pre><br><br></li><li>Pick your favorite build engine:&#xA0;Broccoli,&#xA0;Browserify,&#xA0;Grunt,&#xA0;Gulp, etc.<br><br></li></ul>
+                    
+                    <p></p>
+                    
+                    <div><ul><li>Install the npm module you prefer<br><br><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-sh"><span class="hljs-variable">$ </span>npm install --save-dev grunt-<span class="hljs-number">6</span>to5</code></pre></li></ul></div>
+                    
+                    <div><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Dev Environment (opt 3)</h1>
+                    
+                    <div><ul><li>Clone a boilerplate<br><br><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-sh"><span class="hljs-variable">$ </span>git clone <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/davidjnelson</span><span class="hljs-regexp">/es6-boilerplate.git</span></code></pre></li></ul></div>
+                    
+                    <div><ul><li>Install the dependencies&#xA0;<br><br><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-sh"><span class="hljs-variable">$ </span>npm install
+<span class="hljs-variable">$ </span>bower install</code></pre><br></li><li>Build and serve your app<br><br><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-sh"><span class="hljs-variable">$ </span>gulp build
+<span class="hljs-variable">$ </span>gulp serve</code></pre><br></li></ul></div>
+                    
+                    <div><br></div>
+                    
+                    <div><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Run Your First Transpilation</h1>
+                    
+                    <div style="text-align: center;"><iframe src="http://giphy.com/embed/bSKngBRDPXf2g" width="960" height="740" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen style="width: 60rem; height: 46.25rem; max-width: 95%; max-height: 95%;" class="ng-scope"></iframe>d</div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Browsers Support<div sc-embedded="" class="sc-draggable ng-scope ng-isolate-scope" data-embedded="{&quot;id&quot;:&quot;S6fKBn&quot;,&quot;url&quot;:&quot;http://kangax.github.io/compat-table/es6/&quot;,&quot;type&quot;:&quot;link&quot;,&quot;version&quot;:&quot;1.0&quot;,&quot;title&quot;:&quot;ECMAScript 6 compatibility table&quot;,&quot;thumbnail_width&quot;:1480,&quot;thumbnail_height&quot;:1037,&quot;html&quot;:&quot;&lt;div style=\&quot;left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 70%;\&quot;&gt;&lt;iframe type=\&quot;text/html\&quot; src=\&quot;//kangax.github.io/compat-table/es6/\&quot; allowfullscreen frameborder=\&quot;0\&quot; style=\&quot;top: 0px; left: 0px; width: 100%; height: 100%; position: absolute;\&quot;&gt;&lt;/iframe&gt;&quot;,&quot;thumbnail_url&quot;:&quot;https://s3-eu-west-1.amazonaws.com/filepicker.slidecaptain/screenshot/m958kXTwSqWjb5IFEOi6_kangax.github.io.png&quot;}" contenteditable="false" title="ECMAScript 6 compatibility table" draggable="true" data-size="100" data-opacity="100" data-float="false" data-alignment="center top" data-link="" style="margin: 0.5rem auto; width: 86rem; height: 60.2581081081081rem; opacity: 1;"><div sc-embedded-thumbnail="" data-img="https://s3-eu-west-1.amazonaws.com/filepicker.slidecaptain/screenshot/m958kXTwSqWjb5IFEOi6_kangax.github.io.png" ng-click="showOptions()" class="ng-scope ng-isolate-scope"><img class="sc-embedded-thumbnail" ng-src="https://s3-eu-west-1.amazonaws.com/filepicker.slidecaptain/screenshot/m958kXTwSqWjb5IFEOi6_kangax.github.io.png" src="filepicker.slidecaptain/screenshot/m958kXTwSqWjb5IFEOi6_kangax.github.io.png"></div></div><div><br></div></h1>
+                    
+                    <div><br></div>
+                    
+                    <div><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Guess IE?</h1>
+                    
+                    <div><iframe src="http://giphy.com/embed/kVip8F4E7qI0M" width="960" height="480" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen style="width: 60rem; height: 30rem; max-width: 95%; max-height: 95%;" class="ng-scope"></iframe><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+    </section>
+    
+    <section class="ft-section" data-title="ECMA6 New Core Features" data-id="ecma6-new-core-features">
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">New Core Features</h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">The Future of JavaScript<br></h1>
+                    
+                    <div><br><iframe src="http://giphy.com/embed/vK91v8pXydEs" width="960" height="416" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen style="width: 60rem; height: 26rem; max-width: 95%; max-height: 95%;" class="ng-scope"></iframe><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="font-family: &apos;Open Sans&apos;; text-align: center;">Object.assing<br></h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center; font-size: 28px;"><i>Copy the behavior of an object to another object&#xA0;</i><i style="font-size: 1.75rem;">without&#xA0;using classes or prototypes inheritance.&#xA0;</i></div><div style="text-align: center; font-size: 28px;"><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-keyword">var</span> worker = {};
+
+<span class="hljs-keyword">var</span> canEat = {
+  food: <span class="hljs-string">&apos;nothing&apos;</span>,
+  eat: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    console.log(`eats $<span class="hljs-keyword">this</span>.food`); <span class="hljs-comment">// template string (part of ES6)</span>
+  }
+};
+
+<span class="hljs-built_in">Object</span>.assign(worker, canEat);
+
+worker1 = <span class="hljs-built_in">Object</span>.create(worker);
+worker2 = <span class="hljs-built_in">Object</span>.create(worker);
+worker2.food = <span class="hljs-string">&apos;apple&apos;</span>;
+
+worker2.eat();
+
+</code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Object.is<br></h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center; font-size: 28px;"><i>Object method to determine whether two values are the same value like the strict equality operator.</i>&#xA0;<br><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 29.5625rem;"><code ng-non-bindable="" class="language-javascript">Object.<span class="hljs-keyword">is</span>(<span class="hljs-string">&quot;foo&quot;</span>, <span class="hljs-string">&quot;foo&quot;</span>);     <span class="hljs-regexp">//</span> <span class="hljs-literal">true</span>
+Object.<span class="hljs-keyword">is</span>(<span class="hljs-built_in">window</span>, <span class="hljs-built_in">window</span>);   <span class="hljs-regexp">//</span> <span class="hljs-literal">true</span>
+
+Object.<span class="hljs-keyword">is</span>(<span class="hljs-string">&quot;foo&quot;</span>, <span class="hljs-string">&quot;bar&quot;</span>);     <span class="hljs-regexp">//</span> <span class="hljs-literal">false</span>
+Object.<span class="hljs-keyword">is</span>([], []);           <span class="hljs-regexp">//</span> <span class="hljs-literal">false</span>
+
+<span class="hljs-reserved">var</span> test = {<span class="hljs-attribute">a</span>: <span class="hljs-number">1</span>};
+Object.<span class="hljs-keyword">is</span>(test, test);       <span class="hljs-regexp">//</span> <span class="hljs-literal">true</span>
+</code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">__proto__ in object literals<br></h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center; font-size: 28px;"><i>Change the prototype of an object literal</i>&#xA0;<br><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript">var obj = {
+   
+    __proto_<span class="hljs-number">_</span>: Array.<span class="hljs-keyword">prototype</span>
+    
+};
+
+obj.<span class="hljs-keyword">push</span>(<span class="hljs-string">&apos;one&apos;</span>);
+obj.<span class="hljs-keyword">push</span>(<span class="hljs-string">&apos;two&apos;</span>);
+obj.<span class="hljs-keyword">push</span>(<span class="hljs-string">&apos;three&apos;</span>);
+
+console.<span class="hljs-keyword">log</span>(obj);
+
+<span class="hljs-regexp">//</span> FireFox Object { <span class="hljs-number">0</span>: <span class="hljs-string">&quot;one&quot;</span>, <span class="hljs-number">1</span>: <span class="hljs-string">&quot;two&quot;</span>, <span class="hljs-number">2</span>: <span class="hljs-string">&quot;three&quot;</span>, <span class="hljs-keyword">length</span>: <span class="hljs-number">3</span> }
+// Chrome [<span class="hljs-string">&quot;one&quot;</span>, <span class="hljs-string">&quot;two&quot;</span>, <span class="hljs-string">&quot;three&quot;</span>] </code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">String.prototype.contains<br></h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center; font-size: 28px;"><i>Search for a string contained in a string from a specific position (optional)</i>&#xA0;<br><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript">var <span class="hljs-keyword">str</span> = <span class="hljs-string">&quot;To be in Boston with the snow is cool.&quot;</span>;
+
+console.<span class="hljs-keyword">log</span>(<span class="hljs-keyword">str</span>.contains(<span class="hljs-string">&quot;To be&quot;</span>));       <span class="hljs-comment">// true</span>
+console.<span class="hljs-keyword">log</span>(<span class="hljs-keyword">str</span>.contains(<span class="hljs-string">&quot;question&quot;</span>));    <span class="hljs-comment">// false</span>
+console.<span class="hljs-keyword">log</span>(<span class="hljs-keyword">str</span>.contains(<span class="hljs-string">&quot;Chicago&quot;</span>));     <span class="hljs-comment">// false</span>
+console.<span class="hljs-keyword">log</span>(<span class="hljs-keyword">str</span>.contains(<span class="hljs-string">&quot;To be&quot;</span>, <span class="hljs-number">1</span>));    <span class="hljs-comment">// false</span></code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">String.prototype.startsWith<br></h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center; font-size: 28px;"><i>Check from a specific index (optional) if a string starts with a specific string</i>&#xA0;<br><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript">var <span class="hljs-keyword">str</span> = <span class="hljs-string">&quot;To be in Miami when there is the snow in Boston is better.&quot;</span>;
+
+console.<span class="hljs-keyword">log</span>(<span class="hljs-keyword">str</span>.startsWith(<span class="hljs-string">&quot;To be&quot;</span>));     <span class="hljs-comment">// true</span>
+console.<span class="hljs-keyword">log</span>(<span class="hljs-keyword">str</span>.startsWith(<span class="hljs-string">&quot;To be&quot;</span>, <span class="hljs-number">2</span>));  <span class="hljs-comment">// false</span></code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">String.prototype.repeat<br></h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center; font-size: 28px;"><i>Repeat and concatenate a string a specific amount of times.</i>&#xA0;<br><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript">var <span class="hljs-keyword">str</span> = <span class="hljs-string">&quot;ECMA 6 is pretty cool.&quot;</span>;
+
+console.<span class="hljs-keyword">log</span>(<span class="hljs-keyword">str</span>.repeat(<span class="hljs-number">2</span>));     
+<span class="hljs-comment">// ECMA 6 is pretty cool.ECMA 6 is pretty cool.</span></code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Array.prototype.from<br></h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center; font-size: 28px;"><i>Create an Array from an array-like object or an iterable object.&#xA0;</i>&#xA0;<br><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-keyword">var</span> test = (<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">var</span> args = <span class="hljs-built_in">Array</span>.from(<span class="hljs-built_in">arguments</span>);
+    <span class="hljs-keyword">return</span> args;
+}(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>));                             
+
+console.log(test);            <span class="hljs-comment">// [1, 2, 3]</span></code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Array.prototype.find<br></h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center; font-size: 28px;"><i>Return the first occurrence in an Array that satisfies the conditions described by the callback argument.&#xA0;</i>&#xA0;<br><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript">function isPrime(element, index, <span class="hljs-built_in">array</span>) {
+    
+    var start = <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">while</span> (start &lt;= Math.<span class="hljs-built_in">sqrt</span>(element)) {
+        <span class="hljs-keyword">if</span> (element % start++ &lt; <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+    
+    <span class="hljs-keyword">return</span> (element &gt; <span class="hljs-number">1</span>);
+}
+
+console.<span class="hljs-built_in">log</span>([<span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">12</span>].find(isPrime)); <span class="hljs-comment">// undefined, not found</span>
+console.<span class="hljs-built_in">log</span>([<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">12</span>, <span class="hljs-number">11</span>].find(isPrime)); <span class="hljs-comment">// 5</span></code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Iterators</h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center; font-size: 28px;"><i style="font-family: inherit;">An iterator has a method called next, this method returns an object with two properties: value and done.</i><br></div><div style="text-align: center; font-size: 28px;"><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 27.8125rem;"><code ng-non-bindable="" class="language-javascript">var it = [<span class="hljs-string">&apos;yo&apos;</span>, <span class="hljs-string">&apos;ya&apos;</span>, <span class="hljs-string">&apos;yes&apos;</span>, <span class="hljs-string">&apos;now&apos;</span>, <span class="hljs-string">&apos;then&apos;</span>].<span class="hljs-keyword">keys</span>();
+
+console.<span class="hljs-keyword">log</span>(it.<span class="hljs-keyword">next</span>().value, it.<span class="hljs-keyword">next</span>().done);
+console.<span class="hljs-keyword">log</span>(it.<span class="hljs-keyword">next</span>().value, it.<span class="hljs-keyword">next</span>().done);
+console.<span class="hljs-keyword">log</span>(it.<span class="hljs-keyword">next</span>().value, it.<span class="hljs-keyword">next</span>().done);
+
+console.<span class="hljs-keyword">log</span>(it.<span class="hljs-keyword">next</span>().value, it.<span class="hljs-keyword">next</span>().done); <span class="hljs-regexp">//</span> ???</code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Array.prototype.keys<br></h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center; font-size: 28px;"><i>Returns an&#xA0;</i><i>iterable object</i><i>&#xA0;from an Array.&#xA0;</i>&#xA0;<br><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-keyword">var</span> <span class="hljs-keyword">sequence</span> = [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>];
+
+console.log(<span class="hljs-keyword">sequence</span>.keys());     <span class="hljs-comment">// Iterator {  }</span></code></pre><br></div><div style="font-size: 28px; text-align: start;">An <span style="background-color: rgb(168, 168, 168);">iterable</span> object has a <span style="background-color: rgb(168, 168, 168);">next()</span> method that return an object with the the <span style="background-color: rgb(168, 168, 168);">value</span> and <span style="background-color: rgb(168, 168, 168);">done</span> properties.</div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Array.prototype.entries<br></h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center;"><i style="font-size: 28px;">Returns&#xA0;</i><i>a new Array Iterator object that contains the key/value pairs for each index in the array&#xA0;</i>&#xA0;<br><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript">var arr = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>]<span class="hljs-comment">;</span>
+var eArr = arr<span class="hljs-preprocessor">.entries</span>()<span class="hljs-comment">;</span>
+
+var obj = eArr<span class="hljs-preprocessor">.next</span>()<span class="hljs-comment">;</span>
+while(!obj<span class="hljs-preprocessor">.done</span>){
+  
+  console<span class="hljs-preprocessor">.log</span>(obj<span class="hljs-preprocessor">.value</span>)<span class="hljs-comment">;</span>
+  obj = eArr<span class="hljs-preprocessor">.next</span>()<span class="hljs-comment">;</span>
+  
+}</code></pre><br></div><div style="font-size: 28px; text-align: start;"><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Number Constants<br></h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center; font-size: 28px;"><i>Useful constants to determine the smallest interval between two numbers and the minimum and maximum safe integers.</i></div><div style="text-align: center; font-size: 28px;"><i><br></i></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript">console<span class="hljs-preprocessor">.log</span>(Number<span class="hljs-preprocessor">.EPSILON</span>)<span class="hljs-comment">; </span>
+console<span class="hljs-preprocessor">.log</span>(Number<span class="hljs-preprocessor">.MAX</span>_SAFE_INTEGER)<span class="hljs-comment">; </span>
+console<span class="hljs-preprocessor">.log</span>(Number<span class="hljs-preprocessor">.MIN</span>_SAFE_INTEGER)<span class="hljs-comment">; </span></code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Number (static) Methods<br></h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center; font-size: 28px;"><i>Check if a number is NaN, infinite, integer, etc.&#xA0;</i>&#xA0;<br><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 24.3125rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-keyword">var</span> num = <span class="hljs-number">456</span>;
+
+console.log(<span class="hljs-built_in">Number</span>.isFinite(num));     <span class="hljs-comment">// true</span>
+console.log(<span class="hljs-built_in">Number</span>.isInteger(num));    <span class="hljs-comment">// true</span>
+console.log(<span class="hljs-built_in">Number</span>.isNaN(num));        <span class="hljs-comment">// false</span></code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">for...of</h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center;"><i>Iterates over iterable objects (including Array, Map, Set, arguments object and so on) ignoring instance and prototype properties</i><br></div><div style="text-align: center;"><i>&#xA0;</i></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 38.9375rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-reserved">let</span> arr = [ <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span> ];
+arr.foo = <span class="hljs-string">&quot;hello&quot;</span>;
+
+<span class="hljs-keyword">for</span> (<span class="hljs-reserved">var</span> i <span class="hljs-keyword">in</span> arr) {
+   <span class="hljs-built_in">console</span>.log(i); 
+   <span class="hljs-regexp">//</span> <span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;foo&quot;</span>
+}
+
+<span class="hljs-keyword">for</span> (<span class="hljs-reserved">var</span> i <span class="hljs-keyword">of</span> arr) {
+   <span class="hljs-built_in">console</span>.log(i); 
+   <span class="hljs-regexp">//</span> <span class="hljs-string">&quot;3&quot;</span>, <span class="hljs-string">&quot;5&quot;</span>, <span class="hljs-string">&quot;7&quot;</span>
+}</code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Set + Map</h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center;"><i>A Set is a set of arbitrary values, a Map is a key/value pairs based object; a Set doesn&#x2019;t allow duplicates</i><i style="font-size: 1.75rem; font-family: inherit;">&#xA0;&#xA0;</i></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 48.8125rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-comment">// Sets</span>
+<span class="hljs-built_in">var</span> s <span class="hljs-subst">=</span> <span class="hljs-literal">new</span> <span class="hljs-built_in">Set</span>();
+s<span class="hljs-built_in">.</span>add(<span class="hljs-string">&quot;hello&quot;</span>)<span class="hljs-built_in">.</span>add(<span class="hljs-string">&quot;goodbye&quot;</span>)<span class="hljs-built_in">.</span>add(<span class="hljs-string">&quot;hello&quot;</span>);
+
+console<span class="hljs-built_in">.</span><span class="hljs-keyword">log</span>(s<span class="hljs-built_in">.</span>size);             <span class="hljs-comment">// 2</span>
+console<span class="hljs-built_in">.</span><span class="hljs-keyword">log</span>(s<span class="hljs-built_in">.</span>has(<span class="hljs-string">&quot;hello&quot;</span>));     <span class="hljs-comment">// true</span>
+
+console<span class="hljs-built_in">.</span>dir(s); <span class="hljs-comment">// add(), clear(), delete(), entries(), values(), forEach(), etc.</span>
+
+<span class="hljs-comment">// Maps</span>
+<span class="hljs-built_in">var</span> m <span class="hljs-subst">=</span> <span class="hljs-literal">new</span> <span class="hljs-built_in">Map</span>();
+m<span class="hljs-built_in">.</span><span class="hljs-built_in">set</span>(<span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-number">42</span>);
+m<span class="hljs-built_in">.</span><span class="hljs-built_in">set</span>(s, <span class="hljs-number">34</span>);
+m<span class="hljs-built_in">.</span><span class="hljs-built_in">set</span>(<span class="hljs-string">&apos;yo&apos;</span>, <span class="hljs-number">34</span>);
+
+console<span class="hljs-built_in">.</span><span class="hljs-keyword">log</span>(m<span class="hljs-built_in">.</span>size);           <span class="hljs-comment">// 3</span>
+console<span class="hljs-built_in">.</span><span class="hljs-keyword">log</span>(m<span class="hljs-built_in">.</span>get(s) <span class="hljs-subst">==</span> <span class="hljs-number">34</span>);   <span class="hljs-comment">// true</span>
+
+console<span class="hljs-built_in">.</span>dir(m);  <span class="hljs-comment">// get(), has(), delete(), entries(), keys(), set(), clear(), values(), etc.</span></code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Proxy</h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center;"><i>Proxies enable creation of objects with the full range of behaviors available to host objects&#xA0;<br></i><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 38.3125rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-reserved">var</span> target = {<span class="hljs-attribute">age</span>: <span class="hljs-number">1</span>};
+<span class="hljs-reserved">var</span> handler = {
+  <span class="hljs-attribute">get</span>: <span class="hljs-reserved">function</span> (receiver, name) {
+    <span class="hljs-built_in">console</span>.log(receiver)
+    <span class="hljs-keyword">return</span> `<span class="javascript">Hello, ${name}!</span>`;
+  }
+};
+
+<span class="hljs-reserved">var</span> p = <span class="hljs-keyword">new</span> Proxy(target, handler);
+
+<span class="hljs-built_in">console</span>.log(p.world);
+<span class="hljs-built_in">console</span>.log(p.username);
+
+</code></pre>Still not supported by browser and transpilers, read this <a href="http://www.2ality.com/2014/12/es6-proxies.html">article</a> to learn more about poxies and meta programming...</div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Template Strings</h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center;"><i>Template strings are defined using backticks `, inside, you can use a dollar sign with brackets to insert executable code or variables.</i><br></div><div style="text-align: center;"><i>&#xA0;</i></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-reserved">var</span> name = <span class="hljs-string">&apos;Giorgio&apos;</span>, surname = <span class="hljs-string">&apos;Natili&apos;</span>;
+<span class="hljs-reserved">var</span> template = `<span class="javascript">Hello! My name is ${name} ${surname}!</span>`;
+ 
+<span class="hljs-built_in">console</span>.log(template); 
+<span class="hljs-regexp">//</span> Hello! My name <span class="hljs-keyword">is</span> Giorgio Natili!</code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Generators</h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center;"><i>Generators are functions that can be exited and then re-entered, each call to the next()&#xA0;method&#xA0;will run the body of the&#xA0;function.&#xA0;</i>&#xA0;<br><br></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">idGenerator</span><span class="hljs-params">()</span>{</span>
+    <span class="hljs-keyword">var</span> index = <span class="hljs-number">0</span>,
+        val = <span class="hljs-string">&apos;&apos;</span>;
+    <span class="hljs-keyword">while</span>(<span class="hljs-literal">true</span>){
+         index++;
+         <span class="hljs-keyword">yield</span> val = <span class="hljs-string">&apos;UID&apos;</span> + index;
+    } 
+}
+
+<span class="hljs-keyword">var</span> gen = idGenerator();
+
+console.log(gen.next().value); <span class="hljs-comment">// 0</span></code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Variables Scoping</h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center; font-size: 28px;"><i>Finally the <span style="background-color: rgb(168, 168, 168);">let</span> keyword allow us to create scopes variable.</i></div><div style="text-align: center; font-size: 28px;"><i><br></i></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 43.5625rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-keyword">for</span>(<span class="hljs-reserved">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++){
+  <span class="hljs-built_in">console</span>.log(i);
+}
+<span class="hljs-built_in">console</span>.log(i);     <span class="hljs-regexp">//</span> i <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> defined
+
+<span class="hljs-keyword">if</span>(<span class="hljs-literal">true</span>){
+  (<span class="hljs-reserved">function</span>(){
+    <span class="hljs-reserved">var</span> scoped = <span class="hljs-string">&apos;test&apos;</span>;
+  })();
+  <span class="hljs-built_in">console</span>.log(scoped);    <span class="hljs-regexp">//</span> scoped <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> defined
+
+}<span class="hljs-keyword">else</span>{
+  <span class="hljs-reserved">let</span> nativeScoped = <span class="hljs-number">4</span>;
+}
+
+<span class="hljs-built_in">console</span>.log(nativeScoped);  <span class="hljs-regexp">//</span> nativeScoped <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> defined</code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Destructuring</h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center;"><i>It refers to a kind of</i>&#xA0;assignment that allows you to assign the properties of an array or object to variables&#xA0;<i>&#xA0;to effectively match&#xA0;values to variables or properties.</i><br></div><div style="text-align: center;"><i data-dummy="Click to edit title..."><br></i></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 45.3125rem;"><code ng-non-bindable="" class="language-javascript" data-dummy="Click to edit title..."><span class="hljs-keyword">var</span> [x, y, z] = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+<span class="hljs-comment">// is equivalent to...</span>
+<span class="hljs-keyword">var</span> x = <span class="hljs-number">1</span>, y = <span class="hljs-number">2</span>, z = <span class="hljs-number">3</span>;
+
+<span class="hljs-keyword">let</span> [x, y] = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>];
+console.log(x, y); <span class="hljs-comment">// 1, 2</span>
+
+[x, y] = [y, x]; <span class="hljs-comment">// Swap the values of x and y</span>
+console.log(x, y); <span class="hljs-comment">// 2, 1</span>
+
+<span class="hljs-comment">// Return multiple values</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">example</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">return</span> [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+}
+
+<span class="hljs-keyword">var</span> [a, b, c] = example();
+console.log(a, b, c); <span class="hljs-comment">// 1, 2, 3</span></code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center; font-family: &apos;Open Sans&apos;;">Spreads Operators</h1>
+                    
+                    <h1 style="text-align: center;"><div style="text-align: center;"><i>Rest parameters allow to clearly define functions that accept a variable number of arguments, the <span style="background-color: rgb(168, 168, 168);">...</span> constructor is used to provide spreads to arrays.</i></div><div style="text-align: center;"><i><br></i></div><div style="font-size: 28px; text-align: start;"><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 38.9375rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">logEach</span><span class="hljs-params">(<span class="hljs-rest_arg">...things</span>)</span> {</span>
+    things.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(thing)</span> {</span>
+        console.log(thing); <span class="hljs-comment">// &quot;a&quot; &quot;b&quot; &quot;c&quot;</span>
+    });
+}
+logEach(<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;c&quot;</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">example</span><span class="hljs-params">(a, b, c)</span> {</span>
+    console.log(a, b, c); 
+}
+<span class="hljs-keyword">var</span> args = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+example(...args); <span class="hljs-comment">// 1, 2, 3</span></code></pre><br></div></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+    </section>
+    
+    <section class="ft-section" data-title="Loading External Data" data-id="loading-external-data">
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Loading External Data<br></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Promises<br></h1>
+                    
+                    <div><br><iframe src="http://giphy.com/embed/131euX3fv2Oag8" width="960" height="436" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen style="width: 60rem; height: 27.25rem; max-width: 95%; max-height: 95%;" class="ng-scope"></iframe><br></div>
+                    
+                    <div><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">What is a Promise</h1>
+                    
+                    <div><div><br></div><div><ul><li>I want you to burn this phrase in your mind: A promise is an asynchronous value</li></ul></div><div><ul><li>The Promise object is used for deferred and asynchronous computations</li></ul></div></div>
+                    
+                    <div><ul><li>A Promise is a placeholder for a future possible value<br></li></ul></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Promises in Action</h1>
+                    
+                    <div><div>At their most basic, promises are a bit like event listeners except:</div><div><ul><li>A promise can only succeed or fail once</li><li>If a promise has succeeded or failed and you later add a success/failure callback, the correct callback will be called, even though the event took place earlier</li></ul><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 39.9375rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-keyword">var</span> promise = <span class="hljs-keyword">new</span> Promise(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(resolve, reject)</span> {</span>
+  <span class="hljs-comment">// do a thing, possibly async, then&#x2026;</span>
+
+  <span class="hljs-keyword">if</span> (<span class="hljs-comment">/* everything turned out fine */</span>) {
+    resolve(<span class="hljs-string">&quot;Stuff worked!&quot;</span>);
+  }
+  <span class="hljs-keyword">else</span> {
+    reject(<span class="hljs-built_in">Error</span>(<span class="hljs-string">&quot;It broke&quot;</span>));
+  }
+});</code></pre><br></div></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Using a Promise</h1>
+                    
+                    <div><div style="text-align: center;"><i>A promise can be used by invoking the then() method, it accepts a success and a failure handler as arguments.</i></div><div style="text-align: center;"><i><br></i></div><div style="text-align: left;"><i><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript"><span class="hljs-keyword">var</span> promise = Promise.resolve($.ajax(<span class="hljs-string">&apos;/whatever.json&apos;</span>));</code></pre></i></div><div><br></div><div><pre class="sc-code-display ng-scope" ng-click="selectCode($event)" style="max-height: 42.625rem;"><code ng-non-bindable="" class="language-javascript">promise.<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(result)</span></span> {
+  console.log(result); // <span class="hljs-string">&quot;Stuff worked!&quot;</span>
+}, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(err)</span></span> {
+  console.log(err); // Error: <span class="hljs-string">&quot;It broke&quot;</span>
+});</code></pre><br></div></div>
+                    
+                    <div><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Promises Implementations<br></h1>
+                    
+                    <div><br></div>
+                    
+                    <div><ul><li style="text-align: left;">Q <a href="https://github.com/kriskowal/q">https://github.com/kriskowal/q</a></li><li style="text-align: left;">YUI <a href="http://yuilibrary.com/yui/docs/promise/">http://yuilibrary.com/yui/docs/promise/</a></li><li style="text-align: left;">es6-promise <a href="https://github.com/jakearchibald/es6-promise">https://github.com/jakearchibald/es6-promise</a></li><li style="text-align: left;">JQuery <a href="http://api.jquery.com/promise/">http://api.jquery.com/promise/</a></li><li style="text-align: left;">Angular <a href="https://docs.angularjs.org/api/ng/service/$q">https://docs.angularjs.org/api/ng/service/$q</a></li><li style="text-align: left;">RSVP (ember) <a href="https://github.com/tildeio/rsvp.js/">https://github.com/tildeio/rsvp.js/</a></li></ul></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+    </section>
+    
+    <section class="ft-section" data-title="Resources" data-id="resources">
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Resources<br></h1>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page " data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 ">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Links</h1>
+                    
+                    <div><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources</a><br></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla">https://developer.mozilla.org/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla</a><br></li><li><a href="https://github.com/google/traceur-compiler">https://github.com/google/traceur-compiler</a><br></li><li><a href="https://github.com/jmcriffey/grunt-traceur-compiler">https://github.com/jmcriffey/grunt-traceur-compiler</a><br></li><li><a href="http://pointedears.de/scripts/test/es-matrix/">http://pointedears.de/scripts/test/es-matrix/</a><br></li><li><a href="http://kangax.github.io/compat-table/es6">http://kangax.github.io/compat-table/es6</a><br></li><li><a href="https://people.mozilla.org/~jorendorff/es6-draft.html">https://people.mozilla.org/~jorendorff/es6-draft.html</a><br></li><li><a href="http://fitzgeraldnick.com/weblog/50/">http://fitzgeraldnick.com/weblog/50</a><br></li></ul></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">@giorgionatili<br></h1>
+                    
+                    <div>#mobiletea #javascript #swift #wearable #agile #android #tdd</div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+        <article class="ft-page sc-fragmented" data-title="" data-animation="transition.slideUpIn" style="">
+            <div class="sc-boxwrapper sc-page-type-1 sc-centered">
+                
+                <div class="sc-box box0">
+                    
+                    <h1 style="text-align: center;">Thanks!<br></h1>
+                    
+                    <div>Grazie! Gra&#xE7;ias! Danke! Merci! &#x8C22;&#x8C22;!&#xA0;<br></div>
+                    
+                    <div><br></div>
+                    
+                    <div><iframe src="http://giphy.com/embed/VGHtpsS3UJNRK" width="480" height="266" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen style="width: 30rem; height: 16.625rem; max-width: 95%; max-height: 95%;" class="ng-scope"></iframe><br></div>
+                    
+                </div>
+                
+            </div>
+        </article>
+        
+    </section>
+    
+</article>
+
+<script src="ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="ajax/libs/screenfull.js/1.0.4/screenfull.min.js"></script>
+<script src="ajax/libs/leapjs/0.6.0/leap.min.js"></script>
+<script src="ajax/libs/mathjax/2.3/MathJax.js?config=TeX-AMS_HTML.js"></script>
+<script src="ajax/libs/less.js/1.7.1/less.min.js"></script>
+<script src="ajax/libs/velocity/0.2.1/jquery.velocity.min.js"></script>
+<script src="ajax/libs/velocity/0.2.1/velocity.ui.min.js"></script>
+<script src="bower_components/Flowtime.js/js/flowtime.min.js"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            scale: 75
+        }
+    });
+</script>
+<script type="text/javascript">
+    /**
+     * Calculates the scale based on the actual screen width
+     */
+    function calculateScale() {
+        var html, h, w, scale;
+        html = $('html');
+        h = $(window).height();
+        w = $(window).width();
+        scale = Math.round(w / 1440 * 100);
+        html.css({
+            'font-size': scale + '%'
+        });
+    }
+
+    /**
+     * Starts the Flowtime presentation
+     * @param {Boolean} progress - show the default progress when in page mode
+     * @param {Boolean} autoplay - status of the autoplay feature
+     * @param {Number} delay - the time between the page navigation in milliseconds
+     * @param {Boolean} loop - loop the navigation
+     * @param{Boolean} fullscreen - show fullscreen
+     */
+    function startPresentation(progress, autoplay, delay, loop, fullscreen) {
+        // configure application
+        Flowtime.showProgress(progress);
+        Flowtime.autoplay(autoplay, delay);
+        Flowtime.loop(loop);
+        Flowtime.useOverviewVariant(true);
+        // starts the application with configuration options
+        Flowtime.start();
+        /**
+         * Handle navigation events
+         */
+        Flowtime.onNavigation(function (ev) {
+            var target, animation, clazzes;
+            // animation
+            if (ev.fragmentIndex === -1) {
+                target = $(ev.page); // .find('.sc-boxwrapper');
+                animation = target.data('animation');
+                if (animation.indexOf('.') === -1) {
+                    clazzes = 'animated ' + animation;
+                    target.removeClass(clazzes).addClass(clazzes).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                        $(this).removeClass(clazzes);
+                    });
+                } else {
+                    target.velocity(animation);
+                }
+            }
+            // embedded
+            $(ev.page).find('div[sc-embedded]').each(function () {
+                var data, content;
+                data = $(this).data('embedded');
+                if (data.html) {
+                    content = data.html;
+                    $(this).find('div[sc-embedded-thumbnail]').replaceWith(content);
+
+                    if (window.location.protocol === 'file:') {
+                        // add protocol to embedded videos
+                        $('iframe[src^="//"]').attr('src', function(i, val) {
+                            return 'http:' + val;
+                        });
+                    }
+                } else {
+                }
+
+                if (false && data.html && data.html.length > 0) {
+                    $(this).find('div[sc-embedded-thumbnail]').replaceWith(data.html);
+                }
+            });
+        });
+        // fragmented
+        $('.sc-fragmented').each(function () {
+            $(this).find('.sc-box').children(':parent').each(function () {
+                if ($(this).find('br:only-child').length !== 1) {
+                    $(this).addClass('ft-fragment');
+                }
+            });
+            $(this).find('li').addClass('ft-fragment');
+        });
+        // update to reflect css changes
+        Flowtime.updateNavigation();
+        // centered
+        $('.sc-centered').each(function () {
+            $(this).find('.sc-type1 .box0').addClass('centered');
+        });
+        // contenteditable
+        $('[contenteditable]').attr('contenteditable', null);
+        // fullscreen
+        if (fullscreen) {
+            $('body').click(function () {
+                screenfull.request();
+            });
+            setTimeout(function () {
+                $('body').trigger('click');
+            }, 1000);
+        }
+        // leap motion
+        ( function () {
+            var timeout, detect;
+            timeout = 1000;
+            detect = true;
+            // handle leap events
+            Leap.loop({
+                enableGestures: true
+            }, function (frame) {
+                var g, xdiff, ydiff, zdiff, movements, m;
+                g = frame.gestures[0];
+                if (detect && g && g.state === 'stop') {
+                    switch (g.type) {
+                        case 'circle':
+                        // Flowtime.toggleOverview();
+                        case 'swipe':
+                            xdiff = g.direction[0];
+                            ydiff = g.direction[1];
+                            zdiff = g.direction[2];
+                            movements = [
+                                {
+                                    distance: Math.abs(xdiff),
+                                    coordinate: 'x',
+                                    type: (xdiff > 0) ? 'left' : 'right'
+                                },
+                                {
+                                    distance: Math.abs(ydiff),
+                                    coordinate: 'y',
+                                    type: (ydiff > 0) ? 'down' : 'up'
+                                },
+                                {
+                                    distance: Math.abs(zdiff),
+                                    coordinate: 'z',
+                                    type: (zdiff > 0) ? 'forward' : 'back'
+                                }
+                            ];
+                            // sort movements based on furthest distance
+                            movements.sort(function (a, b) {
+                                return a['distance'] < b['distance'];
+                            });
+                            m = movements[0];
+                            switch (m.type) {
+                                case 'left':
+                                    Flowtime.next();
+                                    break;
+                                case 'right':
+                                    Flowtime.prev();
+                                    break;
+                                case 'forward':
+                                case 'back':
+                                    Flowtime.toggleOverview();
+                                    break;
+                            }
+                        case 'screenTap':
+                            console.debug(g.position);
+                        default:
+                            detect = false;
+                            window.setTimeout(function () {
+                                detect = true;
+                            }, timeout);
+                    }
+                }
+            });
+        }());
+    }
+
+    /**
+     * Event handling
+     */
+    $(document).ready(calculateScale);
+    $(window).resize(calculateScale);
+</script>
+
+
+<script type="text/javascript">
+    startPresentation(true, false, 0, false, false);
+</script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var _gauges = _gauges || [];
+    (function () {
+        var t = document.createElement('script');
+        t.type = 'text/javascript';
+        t.async = true;
+        t.id = 'gauges-tracker';
+        t.setAttribute('data-site-id', '517a9339f5a1f51030000008');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+    })();
+</script>
+</body>
+</html>
